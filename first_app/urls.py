@@ -2,5 +2,5 @@ from django.urls import path
 from first_app import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.form_name_view, name='form_name'),
 ]
