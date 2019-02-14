@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'first_app/base.html' %}
+{% load my_custom_template %}
+
+{% block body_block %}
+<h1>Welcome to other</h1>
+<h2>This is an example of template inheritance</h2>
+<h3>
+    {{text | bailey_cut:'he'}}
+</h3>
+<h3>
+    {{number | add:'99'}}
+</h3>
+{% endblock %}

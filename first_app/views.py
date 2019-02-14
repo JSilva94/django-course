@@ -8,3 +8,10 @@ def index(req):
     date_dict = {'access_records': webpages_list}
 
     return render(req, 'first_app/index.html', context=date_dict)
+
+def other(req):
+    context_dict = {'text': 'hello world', 'number': 100}
+    return render(req, 'first_app/other.html', context=context_dict)
+
+def relative(req):
+    return render(req, 'first_app/relative_url_templates.html')
