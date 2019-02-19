@@ -53,7 +53,7 @@ def register(req):
 
 
 @login_required
-def is_loggedIn(request):
+def special(request):
     return HttpResponse('you are logged in')
 
 @login_required
