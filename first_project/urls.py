@@ -21,4 +21,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('first_app/', include('first_app.urls')),
     path('admin/', admin.site.urls),
+    path('logout/', views.user_logout, name='logout'),
+    path('is-loggedIn/', views.is_loggedIn, name='is_loggedIn')
 ]
+
