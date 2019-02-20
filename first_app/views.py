@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import View
-from django.http import HttpResponse
+from django.views.generic import TemplateView
 
-class CBView(View):
-    def get(self, request):
-        return HttpResponse('CLASS BASED VIEWS ARE COOLO')
-        
+class IndexView(TemplateView):
+    template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['inject_me'] = 'BASIC INJECTION'
+        return context
