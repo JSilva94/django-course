@@ -1,9 +1,8 @@
 from django.shortcuts import render
+from django.views.generic import View
 from django.http import HttpResponse
-from first_app.models import Topic, WebPage, AccessRecord
-# Create your views here.
 
-def index(req):
-   
-
-    return render(req, '/index.html')
+class CBView(View):
+    def get(self, request):
+        return HttpResponse('CLASS BASED VIEWS ARE COOLO')
+        
